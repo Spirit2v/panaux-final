@@ -85,7 +85,7 @@ export default class AddressMap extends Component {
       error => {
         this.setState({error: error.message});
       },
-      {enableHighAccuracy: true, timeout: 200000, maximumAge: 1000},
+      {enableHighAccuracy: true, timeout: 2000, maximumAge: 1000},
     );
   };
   async requestLocationPermission() {

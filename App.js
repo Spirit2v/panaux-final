@@ -1,7 +1,7 @@
 //working apk
 
 import {View, Text} from 'react-native';
-import React from 'react';
+import React,{useEffect} from 'react';
 
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -54,7 +54,7 @@ import CreateAppointment from './src/Views/CreateAppointment';
 import CreateAppointment2 from './src/Views/CreateAppointment2'
 import Payment from './src/Views/Payment';
 import Diagnostic from './src/Views/Diagnostic';
-
+import SplashScreen from 'react-native-splash-screen';
 
 const config = {
   animation: 'spring',
@@ -69,6 +69,9 @@ const config = {
 };
 const Tab1 = createMaterialTopTabNavigator();
 export default function App() {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, [])
   // changeIcon('panaux');
   return (
     <NavigationContainer>
