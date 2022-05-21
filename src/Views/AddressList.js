@@ -27,6 +27,7 @@ import {
   font_description,
   no_address_lottie,
 } from '../config/Constant';
+import Geolocation from '@react-native-community/geolocation';
 import {ConfirmDialog} from 'react-native-simple-dialogs';
 import * as colors from '../assets/css/Colors';
 // import RNAndroidLocationEnabler from "react-native-android-location-enabler";
@@ -44,6 +45,8 @@ class AddressList extends Component<Props> {
       result: [],
       order2: [],
       load: false,
+      latitude:'',
+      longitude:''
     };
     this.getProfile();
   }
@@ -51,6 +54,7 @@ class AddressList extends Component<Props> {
   componentDidMount() {
     this.getProfile();
     this.requestLocationPermission();
+    this.handleUserNavigation();
   }
 
   requestLocationPermission = async () => {
@@ -97,7 +101,21 @@ class AddressList extends Component<Props> {
         this.getProfile();
       });
   };
+  handleUserNavigation = async () => {
+    try {
+      await Geolocation.getCurrentPosition(info => {
+        this.setState({
+          latitude: info.coords.latitude,
+          longitude: info.coords.longitude,
+          coords: info.coords,
+        });
 
+        console.log(info);
+      });
+    } catch (err) {
+      alert(err);
+    }
+  };
   handleBackButtonClick = () => {
     this.props.navigation.goBack(null);
   };
