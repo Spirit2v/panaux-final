@@ -79,25 +79,6 @@ export default class Home extends Component<Props> {
     this.symptoms();
     this.doctorsList();
     this.setState({value: false, newLoad: false});
-    // await axios({
-    //   method: 'post',
-    //   url: api_url + home_details,
-    // })
-    //   .then(async response => {
-    //     this.setState({isLoding: false});
-    //     this.setState({
-    //       home_result: response.data.result,
-    //       banners: response.data.result.banners,
-    //       category: response.data.result.categories,
-    //       // symptoms_first: response.data.result.symptoms_first,
-    //       // symptoms_second: response.data.result.symptoms_second,
-    //       // doctors: response.data.result.doctors,
-    //     });
-    //   })
-    //   .catch(error => {
-    //     this.setState({isLoding: false});
-    //     alert('Something went wrong');
-    //   });
   };
 
   symptoms_doctor_list = name => {
@@ -122,13 +103,18 @@ export default class Home extends Component<Props> {
           translucent={false}
           networkActivityIndicatorVisible={true}
         />
-      <Text
+        <View
+        style={{padding:12}}
+        >
+        <Text
       style={ {fontSize: 25,
         color: colors.theme_fg_two,
-        fontFamily: font_title,padding:12}}
+        fontFamily: font_title,padding:8,justifyContent:'center',alignItems:'center'}}
       >
         Home
       </Text>
+        </View>
+     
       <View
       style={{
         flex: 1,
@@ -138,8 +124,9 @@ export default class Home extends Component<Props> {
         padding: 12,
         // borderTopLeftRadius: 42,
         // borderTopRightRadius: 42,
-        backgroundColor: 'white',
-        paddingHorizontal:22
+        // backgroundColor: 'white',
+        paddingHorizontal:22,
+        marginTop:-62
       }}>
      
 

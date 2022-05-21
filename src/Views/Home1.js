@@ -262,11 +262,16 @@ export default class Home1 extends Component<Props> {
                   />
                   :
                   <View
-                  style={{borderRadius:45,borderColor:'grey',borderWidth:.3,padding:16}}
+                  style={{borderRadius:25,borderColor:'grey',borderWidth:.3,padding:12}}
                   >
-                      <Text>
+                      {/* <Text>
                     No Image 
-                  </Text>
+                  </Text> */}
+                  <View
+                  style={{height:38,width:38}}
+                  >
+
+                  </View>
                   </View>
                 
 }
@@ -353,6 +358,7 @@ const styles = StyleSheet.create({
   pre_style1: {
     alignItems: 'flex-start',
     margin: 10,
+    backgroundColor:'white'
   },
   pre_style2: {width: 100, justifyContent: 'center'},
   pre_style3: {color: colors.theme_fg_two, fontSize: 30},

@@ -5,7 +5,7 @@ import { Dimensions } from 'react-native';
 export const settings = "app_setting";
 // export const img_url = "http://mrpharman.demoproducts.in/public/uploads/";
 export const base_url = "http://desihealth.rithlaundry.com/";
-export const api_url = "http://desihealth.rithlaundry.com/api/";
+export const api_url = "https://api.panaux.com//api/";
 // export const api_url1 = "http://192.168.1.5:3000/api";
 export const api_url1 = "https://desi-health-api.herokuapp.com/api";
 export const img_url = "http://desihealth.rithlaundry.com/public/uploads/";

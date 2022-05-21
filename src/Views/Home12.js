@@ -160,7 +160,7 @@ export default class Home12 extends Component<Props> {
             <TouchableOpacity
              style={{width:'100%'}}
             >
-            <HomeButton title="Parental Care" pic="people-outline" />
+            <HomeButton title="Parenta Care" pic="people-outline" />
             </TouchableOpacity>
             
             <TouchableOpacity

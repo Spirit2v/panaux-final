@@ -124,7 +124,7 @@ export default class Appointment extends Component {
                       borderRadius: 150 / 2,
                       overflow: 'hidden',
                       borderWidth: 1,
-                      borderColor: 'yellow',
+                      // borderColor: 'yellow',
                       marginLeft: 12,
                     }}
                     source={{uri: item.doctor.profilePicture}}
